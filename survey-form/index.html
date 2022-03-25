@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/survey-form/style.css">
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <aside>
+    <h1 id="title">
+      Survey Form
+    </h1>
+    <p id="description">A form with some information you can tell us</p>
+  </aside>
+  <form id="survey-form">
+    <div id="name-div">
+      <label for="name" id="name-label">Name:</label>
+      <input class="survey-form__input" type="text" id="name" name="name" placeholder="Your name" required />
+    </div>
+    <div id="email-div">
+      <label for="email" id="email-label">Email:</label>
+      <input class="survey-form__input" type="email" id="email" name="email" placeholder="Your email" required />
+    </div>
+    <div id="number-div">
+      <label for="number" id="number-label">Age:</label>
+      <input class="survey-form__input" type="number" id="number" name="age" min="0" max="150" placeholder="Your age" />
+    </div>
+    <label for="status" id="dropdown-label">Marital Status.:</label>
+    <select id="dropdown" name="status">
+      <option value="single">Single</option>
+      <option value="married">Married</option>
+      <option value="widowed">Widowed</option>
+      <option value="divorced">Divorced</option>
+      <option value="Other">Other</option>
+    </select>
+    <div id="survey-form__dropdown">
+      <p>What is your level of satisfaction with your current job?</p>
+      <div>
+        <input type="radio" id="unsatisfied" name="satisfaction" value="0" checked>
+        <label for="unsatisfied">Unsatisfied</label>
+      </div>
+
+      <div>
+        <input type="radio" id="normal" name="satisfaction" value="1">
+        <label for="normal">Normal</label>
+      </div>
+
+      <div>
+        <input type="radio" id="satisfied" name="satisfaction" value="2">
+        <label for="satisfied">Satisfied</label>
+      </div>
+    </div>
+    <div id="survey-form__checkbox">
+      <p>Which of these technologies do you master?</p>
+
+      <div>
+        <input type="checkbox" id="node" name="node" value="node">
+        <label for="node">Node</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="ruby" name="ruby" value="ruby">
+        <label for="ruby">Ruby on Rails</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="php" name="php" value="php">
+        <label for="php">PHP</label>
+      </div>
+
+    </div>
+
+    <div id="survey-form__textarea">
+      <p>Tell us about you:</p>
+      <textarea id="about" name="about" rows="10" cols="50" placeholder="Write here"></textarea>
+    </div>
+    <div id="survey-form__buttons">
+      <input type="submit" id="submit" class="button submit" value="Submit" />
+      <input type="reset" class="button reset" value="Reset" />
+    </div>
+  </form>
+
+</body>
+
+</html>
